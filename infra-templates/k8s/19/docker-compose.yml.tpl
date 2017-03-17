@@ -31,6 +31,9 @@ kubelet:
         - rancher-cni-driver:/etc/cni:ro
         - rancher-cni-driver:/opt/cni:ro
         - /dev:/host/dev
+        - /sbin/modprobe:/sbin/modprobe:ro
+        - /lib/modules:/lib/modules:ro
+        - /etc/ceph:/etc/ceph:ro
     net: host
     pid: host
     ipc: host
