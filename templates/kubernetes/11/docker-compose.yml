@@ -21,6 +21,9 @@ kubelet:
         - /var/run:/host/var/run
         - /var/lib/docker:/var/lib/docker
         - /dev:/host/dev
+        - /sbin/modprobe:/sbin/modprobe:ro
+        - /lib/modules:/lib/modules:ro
+        - /etc/ceph:/etc/ceph:ro
     net: host
     pid: host
     ipc: host
